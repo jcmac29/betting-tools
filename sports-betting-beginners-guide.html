@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete sports betting guide for beginners. Learn how odds work, different bet types, betting strategies, and how to get started with legal online sportsbooks.">
+    <meta name="keywords" content="sports betting guide, how to bet on sports, betting for beginners, sports betting odds, moneyline, point spread, parlays">
+    <meta name="author" content="Sharp Betting Guide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sports Betting for Beginners: The Complete 2026 Guide">
+    <meta property="og:description" content="Learn everything you need to know about sports betting. Odds, bet types, strategies, and how to start betting responsibly.">
+    <meta property="og:type" content="article">
+    <title>Sports Betting for Beginners: The Complete 2026 Guide | Sharp Betting Guide</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #1c2128;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-green: #2ea043;
+            --accent-gold: #d4a72c;
+            --accent-green-hover: #3fb950;
+            --border-color: #30363d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        a { color: var(--accent-green); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--accent-green-hover); }
+
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+        .logo span { color: var(--accent-gold); }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: var(--text-secondary); font-weight: 500; }
+        nav a:hover { color: var(--text-primary); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: 3rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-header-content { max-width: 800px; margin: 0 auto; }
+        .breadcrumb { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
+        .breadcrumb a { color: var(--text-secondary); }
+        .breadcrumb a:hover { color: var(--accent-gold); }
+        .article-header h1 { font-size: 2.25rem; margin-bottom: 1rem; line-height: 1.2; }
+        .article-meta { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+        .article-content h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-content h3 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--accent-gold); }
+        .article-content h4 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; }
+        .article-content p { margin-bottom: 1.25rem; color: var(--text-primary); }
+        .article-content ul, .article-content ol { margin: 1rem 0 1.5rem 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .example-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .example-box strong { color: var(--accent-gold); }
+
+        .formula-box {
+            background-color: var(--bg-secondary);
+            border-left: 3px solid var(--accent-green);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+
+        .warning-box {
+            background-color: rgba(248, 81, 73, 0.1);
+            border: 1px solid #f85149;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .warning-box strong { color: #f85149; }
+
+        .tip-box {
+            background-color: rgba(46, 160, 67, 0.1);
+            border: 1px solid var(--accent-green);
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .tip-box strong { color: var(--accent-green); }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--bg-card);
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) { background-color: var(--bg-secondary); }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .cta-box h4 { color: var(--text-primary); margin-bottom: 0.5rem; }
+        .cta-box p { color: var(--text-secondary); margin-bottom: 1rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin: 0.25rem;
+        }
+
+        .btn-primary { background-color: var(--accent-green); color: white; }
+        .btn-primary:hover { background-color: var(--accent-green-hover); color: white; }
+
+        .step-list { counter-reset: step-counter; list-style: none; margin-left: 0; padding-left: 0; }
+
+        .step-list li {
+            counter-increment: step-counter;
+            padding-left: 3rem;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--accent-gold);
+            color: var(--bg-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .related-articles {
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .related-articles h3 { color: var(--text-primary); margin-bottom: 1rem; border: none; }
+        .related-articles ul { list-style: none; margin: 0; padding: 0; }
+        .related-articles li { margin-bottom: 0.75rem; }
+
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+
+        .disclaimer {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .disclaimer h4 { color: var(--accent-gold); margin-bottom: 0.75rem; font-size: 0.9rem; }
+        .disclaimer p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0; }
+        .copyright { text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 1.5rem; }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--bg-secondary);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+            nav ul.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .article-header h1 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Sharp<span>Betting</span>Guide</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="best-sportsbook-bonuses-2026.html">Bonuses</a></li>
+                    <li><a href="best-betting-apps.html">Betting Apps</a></li>
+                    <li><a href="sports-betting-beginners-guide.html">Beginners Guide</a></li>
+                    <li><a href="draftkings-vs-fanduel.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="article-header">
+        <div class="article-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &raquo; Guides &raquo; Beginners Guide
+            </div>
+            <h1>Sports Betting for Beginners: The Complete 2026 Guide</h1>
+            <div class="article-meta">Last Updated: February 2026</div>
+        </div>
+    </div>
+
+    <article class="article-container">
+        <div class="article-content">
+            <p class="intro-text">New to sports betting? You're in the right place. This comprehensive guide covers everything you need to know before placing your first bet. We'll explain how odds work, break down different bet types, and share strategies to help you bet smarter from day one. Sports betting has become legal in over 30 US states, and millions of Americans are placing their first bets.</p>
+
+            <h2>Understanding Sports Betting Odds</h2>
+
+            <p>Odds are the foundation of sports betting. They tell you two things: how likely something is to happen and how much you'll win if it does.</p>
+
+            <h3>American Odds Explained</h3>
+
+            <p>In the United States, most sportsbooks display American odds (also called moneyline odds). These appear as either positive (+) or negative (-) numbers.</p>
+
+            <h4>Negative Odds (-)</h4>
+            <p>Negative odds indicate the favorite. The number tells you how much you need to bet to win $100.</p>
+
+            <div class="example-box">
+                <strong>Example: -150 odds</strong><br>
+                Bet $150 to win $100<br>
+                Total return: $250 ($150 original bet + $100 profit)
+            </div>
+
+            <h4>Positive Odds (+)</h4>
+            <p>Positive odds indicate the underdog. The number tells you how much you'll win on a $100 bet.</p>
+
+            <div class="example-box">
+                <strong>Example: +200 odds</strong><br>
+                Bet $100 to win $200<br>
+                Total return: $300 ($100 original bet + $200 profit)
+            </div>
+
+            <h3>Calculating Payouts</h3>
+
+            <div class="formula-box">
+                <strong>For negative odds:</strong> (Bet Amount / Odds) x 100 = Profit<br><br>
+                <strong>For positive odds:</strong> (Bet Amount x Odds) / 100 = Profit
+            </div>
+
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>$50 bet at -200: ($50 / 200) x 100 = $25 profit</li>
+                <li>$50 bet at +150: ($50 x 150) / 100 = $75 profit</li>
+            </ul>
+
+            <h3>What is "Juice" or "Vig"?</h3>
+
+            <p>The juice (also called vigorish or vig) is how sportsbooks make money. It's built into the odds. A perfectly even bet would be +100 on both sides. But sportsbooks typically offer -110 on both sides of a point spread.</p>
+
+            <div class="tip-box">
+                <strong>Pro Tip:</strong> The lower the juice, the better the value for bettors. Standard juice is -110, but some sportsbooks offer -105 on certain bets.
+            </div>
+
+            <h2>Types of Sports Bets</h2>
+
+            <h3>Moneyline Bets</h3>
+            <p>The simplest bet type: pick who wins. No point spread, no complications.</p>
+
+            <div class="example-box">
+                <strong>Example: NFL Moneyline</strong><br>
+                Kansas City Chiefs: -180<br>
+                Denver Broncos: +155<br><br>
+                If you bet on the Chiefs at -180, you need Kansas City to win the game. Your $180 bet returns $280 ($100 profit + $180 stake).
+            </div>
+
+            <p><strong>Best for:</strong> Games where you have a strong opinion on the winner but uncertainty about the margin.</p>
+
+            <h3>Point Spread Bets</h3>
+            <p>Point spreads level the playing field between favorites and underdogs.</p>
+
+            <div class="example-box">
+                <strong>Example: NBA Point Spread</strong><br>
+                Boston Celtics: -6.5 (-110)<br>
+                Miami Heat: +6.5 (-110)<br><br>
+                Betting Celtics -6.5 means Boston must win by 7 or more points for your bet to win. Betting Heat +6.5 means Miami must lose by fewer than 7 points (or win outright) for your bet to cash.
+            </div>
+
+            <h3>Totals (Over/Under)</h3>
+            <p>Totals bets don't care who wins. You're betting on the combined score of both teams.</p>
+
+            <div class="example-box">
+                <strong>Example: MLB Total</strong><br>
+                Over 8.5 runs: -110<br>
+                Under 8.5 runs: -110<br><br>
+                If the final score is 5-4 (9 total runs), the Over wins. If it's 4-3 (7 total runs), the Under wins.
+            </div>
+
+            <h3>Parlays</h3>
+            <p>A parlay combines multiple bets into one. All selections must win for the parlay to pay.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Parlay Legs</th>
+                        <th>Approximate Odds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2</td><td>+260</td></tr>
+                    <tr><td>3</td><td>+600</td></tr>
+                    <tr><td>4</td><td>+1228</td></tr>
+                    <tr><td>5</td><td>+2435</td></tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>Warning:</strong> Parlays favor the sportsbook. The increased payout doesn't fully compensate for the decreased win probability. Use them sparingly for entertainment, not as a primary strategy.
+            </div>
+
+            <h3>Prop Bets</h3>
+            <p>Proposition bets focus on specific outcomes within a game, often involving individual players.</p>
+
+            <p><strong>Example Props:</strong></p>
+            <ul>
+                <li>Patrick Mahomes Over 275.5 passing yards (-115)</li>
+                <li>LeBron James to score first basket (+550)</li>
+                <li>Total strikeouts by pitcher Over 6.5 (-120)</li>
+            </ul>
+
+            <h3>Futures</h3>
+            <p>Futures bets are placed on events that will be decided later, like championship winners or season awards.</p>
+
+            <h3>Live Betting</h3>
+            <p>Live betting (or in-play betting) allows you to bet while the game is happening. Odds update continuously based on the game's progress.</p>
+
+            <h2>Getting Started: Step-by-Step Guide</h2>
+
+            <h3>Step 1: Choose a Legal Sportsbook</h3>
+
+            <p>Only bet with licensed, legal sportsbooks. Here are our top recommendations for beginners:</p>
+
+            <div class="cta-box">
+                <h4>Recommended Sportsbooks for Beginners</h4>
+                <p>Start with these trusted, user-friendly platforms</p>
+                <a href="#" class="btn btn-primary">DraftKings - Bet $5, Get $200</a>
+                <a href="#" class="btn btn-primary">FanDuel - $1,000 No Sweat Bet</a>
+            </div>
+
+            <h3>Step 2: Create Your Account</h3>
+
+            <ol class="step-list">
+                <li><strong>Download the app</strong> or visit the website</li>
+                <li><strong>Enter personal information</strong> (name, address, DOB)</li>
+                <li><strong>Verify your identity</strong> (SSN last 4 digits, sometimes ID upload)</li>
+                <li><strong>Set up login credentials</strong></li>
+                <li><strong>Enable responsible gambling features</strong></li>
+            </ol>
+
+            <h3>Step 3: Deposit Funds</h3>
+
+            <p>Most sportsbooks accept:</p>
+            <ul>
+                <li>Debit/credit cards</li>
+                <li>PayPal</li>
+                <li>Venmo</li>
+                <li>Bank transfers</li>
+                <li>Cash at casino cages</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> PayPal and Venmo typically offer the fastest withdrawals. Set up these methods during deposit for easier cashouts later.
+            </div>
+
+            <h3>Step 4: Claim Your Welcome Bonus</h3>
+
+            <p>Follow the sportsbook's instructions to claim your new user bonus. See our <a href="best-sportsbook-bonuses-2026.html">complete bonus guide</a> for details.</p>
+
+            <h3>Step 5: Place Your First Bet</h3>
+
+            <p>Start small. Your first bet should be an amount you're comfortable losing entirely.</p>
+
+            <div class="tip-box">
+                <strong>Recommended First Bet:</strong>
+                <ul>
+                    <li>Choose a sport you know well</li>
+                    <li>Pick a simple bet type (moneyline or spread)</li>
+                    <li>Bet an amount that won't affect your finances</li>
+                    <li>Don't chase excitement with a parlay</li>
+                </ul>
+            </div>
+
+            <h2>Essential Strategies for New Bettors</h2>
+
+            <h3>Start with What You Know</h3>
+            <p>Your first edge as a bettor is knowledge. If you've watched football your whole life, you understand things casual observers don't. Bet on sports you genuinely follow.</p>
+
+            <h3>Shop for the Best Lines</h3>
+            <p>Different sportsbooks offer different odds. Having accounts at multiple sportsbooks is essential for serious bettors.</p>
+
+            <h3>Track Your Bets</h3>
+            <p>Keeping records helps you understand your betting patterns and identify strengths and weaknesses. Track date, sport, bet type, odds, stake, result, and profit/loss.</p>
+
+            <h3>Avoid Common Beginner Mistakes</h3>
+
+            <ul>
+                <li><strong>Betting with your heart:</strong> Don't let fandom cloud judgment</li>
+                <li><strong>Chasing losses:</strong> Stick to your plan after losing</li>
+                <li><strong>Ignoring bankroll management:</strong> See our <a href="bankroll-management-guide.html">complete bankroll guide</a></li>
+                <li><strong>Overvaluing favorites:</strong> Public bettors love favorites, creating value on underdogs</li>
+                <li><strong>Parlays as primary strategy:</strong> The house edge is significant</li>
+            </ul>
+
+            <h2>Responsible Gambling</h2>
+
+            <h3>Setting Limits</h3>
+            <p>Most sportsbooks allow you to set deposit limits, bet limits, loss limits, and session time limits. Set these proactively.</p>
+
+            <h3>Warning Signs of Problem Gambling</h3>
+            <p>Seek help if you:</p>
+            <ul>
+                <li>Bet more than you can afford to lose</li>
+                <li>Chase losses with bigger bets</li>
+                <li>Lie about your betting activity</li>
+                <li>Neglect responsibilities due to gambling</li>
+                <li>Feel anxious or irritable when not betting</li>
+            </ul>
+
+            <h3>Resources for Help</h3>
+            <ul>
+                <li><strong>National Problem Gambling Helpline:</strong> 1-800-522-4700</li>
+                <li><strong>Gamblers Anonymous:</strong> <a href="https://www.gamblersanonymous.org" target="_blank" rel="noopener">gamblersanonymous.org</a></li>
+                <li><strong>National Council on Problem Gambling:</strong> <a href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a></li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <h4>Is sports betting legal?</h4>
+            <p>Sports betting is legal in over 30 US states as of 2026. Legality depends on your physical location when placing bets, not your state of residence.</p>
+
+            <h4>How old do I need to be?</h4>
+            <p>You must be 21+ to bet at online sportsbooks in most states.</p>
+
+            <h4>Do I have to pay taxes on winnings?</h4>
+            <p>Yes, gambling winnings are taxable income. Sportsbooks issue a W-2G for winnings over $600 (and 300x the wager).</p>
+
+            <h4>What's the best sport to bet on?</h4>
+            <p>Bet on sports you know best. NFL and NBA have the most betting options and analysis available.</p>
+
+            <h4>How much should I bet?</h4>
+            <p>Never bet more than you can afford to lose. A common guideline is limiting bets to 1-5% of your total bankroll.</p>
+
+            <h2>Next Steps</h2>
+
+            <p>Ready to start betting? Here's your action plan:</p>
+
+            <ol>
+                <li><strong>Sign up at a legal sportsbook</strong> - Claim your welcome bonus</li>
+                <li><strong>Make a small deposit</strong> - Start with an amount you're comfortable losing</li>
+                <li><strong>Place your first bet</strong> - Keep it simple, choose what you know</li>
+                <li><strong>Track your results</strong> - Start building your betting history</li>
+                <li><strong>Learn and improve</strong> - Study your winning and losing bets</li>
+            </ol>
+
+            <div class="cta-box">
+                <h4>Ready to Start Betting?</h4>
+                <p>Claim your welcome bonus and place your first bet today</p>
+                <a href="best-sportsbook-bonuses-2026.html" class="btn btn-primary">View Best Bonuses</a>
+            </div>
+
+            <p>Sports betting is a marathon, not a sprint. Focus on learning and having fun while staying within your limits. Welcome to sports betting. Good luck, and bet responsibly.</p>
+
+            <div class="related-articles">
+                <h3>Continue Learning</h3>
+                <ul>
+                    <li><a href="bankroll-management-guide.html">Bankroll Management Guide</a></li>
+                    <li><a href="best-sportsbook-bonuses-2026.html">Best Sportsbook Bonuses 2026</a></li>
+                    <li><a href="best-betting-apps.html">Best Sports Betting Apps</a></li>
+                    <li><a href="draftkings-vs-fanduel.html">DraftKings vs FanDuel</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-container">
+            <div class="disclaimer">
+                <h4>Gambling Disclaimer</h4>
+                <p>Gambling involves risk. Only wager what you can afford to lose. If you or someone you know has a gambling problem, call <strong>1-800-GAMBLER</strong> (National Council on Problem Gambling). You must be 21+ years of age and physically present in a state where online sports betting is legal to place wagers. Void where prohibited. This site contains affiliate links. Please gamble responsibly.</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Sharp Betting Guide. All rights reserved. | <a href="index.html">Home</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

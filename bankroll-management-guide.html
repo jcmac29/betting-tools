@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete bankroll management guide for sports betting. Learn unit sizing, betting strategies, how to manage losing streaks, and protect your betting bankroll.">
+    <meta name="keywords" content="bankroll management, sports betting strategy, unit sizing, Kelly criterion, flat betting, betting bankroll, money management">
+    <meta name="author" content="Sharp Betting Guide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Bankroll Management for Sports Betting: The Complete Guide">
+    <meta property="og:description" content="Learn how to manage your betting bankroll like a professional. Strategies for unit sizing, surviving losing streaks, and maximizing long-term growth.">
+    <meta property="og:type" content="article">
+    <title>Bankroll Management for Sports Betting: The Complete Guide | Sharp Betting Guide</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #1c2128;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-green: #2ea043;
+            --accent-gold: #d4a72c;
+            --accent-green-hover: #3fb950;
+            --border-color: #30363d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        a { color: var(--accent-green); text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: var(--accent-green-hover); }
+
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+        .logo span { color: var(--accent-gold); }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: var(--text-secondary); font-weight: 500; }
+        nav a:hover { color: var(--text-primary); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: 3rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-header-content { max-width: 800px; margin: 0 auto; }
+        .breadcrumb { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
+        .breadcrumb a { color: var(--text-secondary); }
+        .breadcrumb a:hover { color: var(--accent-gold); }
+        .article-header h1 { font-size: 2.25rem; margin-bottom: 1rem; line-height: 1.2; }
+        .article-meta { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+        .article-content h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-content h3 { font-size: 1.25rem; margin: 2rem 0 1rem; color: var(--accent-gold); }
+        .article-content h4 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; }
+        .article-content p { margin-bottom: 1.25rem; color: var(--text-primary); }
+        .article-content ul, .article-content ol { margin: 1rem 0 1.5rem 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .highlight-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box strong { color: var(--accent-gold); }
+
+        .formula-box {
+            background-color: var(--bg-secondary);
+            border-left: 3px solid var(--accent-green);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+
+        .warning-box {
+            background-color: rgba(248, 81, 73, 0.1);
+            border: 1px solid #f85149;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .warning-box strong { color: #f85149; }
+
+        .tip-box {
+            background-color: rgba(46, 160, 67, 0.1);
+            border: 1px solid var(--accent-green);
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .tip-box strong { color: var(--accent-green); }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--bg-card);
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) { background-color: var(--bg-secondary); }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .cta-box h4 { color: var(--text-primary); margin-bottom: 0.5rem; }
+        .cta-box p { color: var(--text-secondary); margin-bottom: 1rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary { background-color: var(--accent-green); color: white; }
+        .btn-primary:hover { background-color: var(--accent-green-hover); color: white; }
+
+        .strategy-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .strategy-card h4 { color: var(--accent-gold); margin-bottom: 0.75rem; }
+
+        .key-takeaways {
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .key-takeaways h3 { color: var(--accent-gold); margin-bottom: 1rem; border: none; }
+        .key-takeaways ol { margin: 0; padding-left: 1.5rem; }
+        .key-takeaways li { margin-bottom: 0.5rem; }
+
+        .related-articles {
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .related-articles h3 { color: var(--text-primary); margin-bottom: 1rem; border: none; }
+        .related-articles ul { list-style: none; margin: 0; padding: 0; }
+        .related-articles li { margin-bottom: 0.75rem; }
+
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+
+        .disclaimer {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .disclaimer h4 { color: var(--accent-gold); margin-bottom: 0.75rem; font-size: 0.9rem; }
+        .disclaimer p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0; }
+        .copyright { text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 1.5rem; }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--bg-secondary);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+            nav ul.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .article-header h1 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Sharp<span>Betting</span>Guide</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="best-sportsbook-bonuses-2026.html">Bonuses</a></li>
+                    <li><a href="best-betting-apps.html">Betting Apps</a></li>
+                    <li><a href="sports-betting-beginners-guide.html">Beginners Guide</a></li>
+                    <li><a href="draftkings-vs-fanduel.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="article-header">
+        <div class="article-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &raquo; Guides &raquo; Bankroll Management
+            </div>
+            <h1>Bankroll Management for Sports Betting: The Complete Guide</h1>
+            <div class="article-meta">Last Updated: February 2026</div>
+        </div>
+    </div>
+
+    <article class="article-container">
+        <div class="article-content">
+            <p class="intro-text">Bankroll management is the most important skill in sports betting that nobody talks about. You can pick winners at a 60% rate, but without proper bankroll management, you can still go broke. Meanwhile, a disciplined bettor hitting 53% can build wealth over time. This guide will teach you how to manage your betting money like a professional.</p>
+
+            <h2>What is Bankroll Management?</h2>
+
+            <p>Bankroll management is a system for determining how much to wager on each bet based on your total betting funds (bankroll). It's designed to:</p>
+
+            <ul>
+                <li>Prevent catastrophic losses</li>
+                <li>Maximize long-term growth</li>
+                <li>Reduce emotional decision-making</li>
+                <li>Survive inevitable losing streaks</li>
+                <li>Turn a modest edge into consistent profits</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Key Insight:</strong> Think of your bankroll as your betting business's capital. No successful business puts 100% of its capital into a single venture. Your bankroll deserves the same protection.
+            </div>
+
+            <h2>Setting Your Starting Bankroll</h2>
+
+            <p>Your bankroll should be money you can afford to lose completely. This is not your savings, rent money, or emergency fund.</p>
+
+            <h3>How Much Should Your Starting Bankroll Be?</h3>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Bettor Type</th>
+                        <th>Recommended Bankroll</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Recreational</td>
+                        <td>$200-$500</td>
+                        <td>Enough to absorb variance, small enough that losses don't cause stress</td>
+                    </tr>
+                    <tr>
+                        <td>Serious</td>
+                        <td>$1,000-$5,000</td>
+                        <td>Supports meaningful returns, handles longer losing streaks</td>
+                    </tr>
+                    <tr>
+                        <td>Professional</td>
+                        <td>$10,000+</td>
+                        <td>Optimal for professional-level betting, allows minimal risk per bet</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>The Golden Rule:</strong> Never add to your bankroll from outside sources. If you lose your bankroll, either stop betting or take a significant break. Adding money to chase losses is the path to serious financial problems.
+            </div>
+
+            <h2>Understanding Units</h2>
+
+            <p>In bankroll management, bets are measured in "units" rather than dollars. A unit is a standardized bet size based on your bankroll.</p>
+
+            <h3>What is a Unit?</h3>
+
+            <p>One unit equals a fixed percentage of your bankroll, typically 1-5%.</p>
+
+            <div class="highlight-box">
+                <strong>Example:</strong><br>
+                Bankroll: $1,000<br>
+                1 Unit: $10-$50 (at 1-5%)
+            </div>
+
+            <h3>Why Use Units?</h3>
+
+            <ol>
+                <li><strong>Standardization:</strong> Compare results across different bankroll sizes</li>
+                <li><strong>Risk Control:</strong> Prevents oversized bets</li>
+                <li><strong>Track Performance:</strong> "+5 units" means the same relative success regardless of bankroll size</li>
+                <li><strong>Psychological:</strong> Removes dollar amounts from decision-making</li>
+            </ol>
+
+            <h3>Determining Your Unit Size</h3>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Risk Tolerance</th>
+                        <th>Unit Size</th>
+                        <th>Units in Bankroll</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Conservative</td>
+                        <td>1%</td>
+                        <td>100 units</td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td>2%</td>
+                        <td>50 units</td>
+                    </tr>
+                    <tr>
+                        <td>Aggressive</td>
+                        <td>3%</td>
+                        <td>33 units</td>
+                    </tr>
+                    <tr>
+                        <td>Very Aggressive</td>
+                        <td>5%</td>
+                        <td>20 units</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="tip-box">
+                <strong>Our Recommendation:</strong> Start with 1-2% units. You can always increase later, but you can't recover money lost to oversized bets.
+            </div>
+
+            <h2>Bankroll Management Strategies</h2>
+
+            <div class="strategy-card">
+                <h4>Flat Betting (Recommended for Most Bettors)</h4>
+                <p>Flat betting means wagering the same amount on every bet, regardless of confidence level.</p>
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li>Set your unit size (e.g., 2% of bankroll)</li>
+                    <li>Bet exactly one unit on every wager</li>
+                    <li>Recalculate unit size periodically (weekly or monthly)</li>
+                </ul>
+                <p><strong>Best For:</strong> New bettors, recreational bettors, and anyone who struggles with discipline.</p>
+            </div>
+
+            <div class="strategy-card">
+                <h4>Confidence-Based Betting</h4>
+                <p>This system varies bet size based on how confident you are in each pick.</p>
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li>Establish a rating scale (1-5 or 1-10)</li>
+                    <li>Assign confidence level to each bet</li>
+                    <li>Bet units equal to confidence level</li>
+                </ul>
+                <div class="warning-box">
+                    <strong>Warning:</strong> Most bettors overestimate their highest-confidence plays. If you use this system, track your results by confidence level to verify your assessments are accurate.
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h4>The Kelly Criterion</h4>
+                <p>The Kelly Criterion is a mathematically optimal betting system used by professional bettors and financial traders.</p>
+                <div class="formula-box">
+                    <strong>The Formula:</strong><br>
+                    Kelly % = (bp - q) / b<br><br>
+                    Where:<br>
+                    b = decimal odds - 1<br>
+                    p = your estimated probability of winning<br>
+                    q = probability of losing (1 - p)
+                </div>
+                <p><strong>Practical Application:</strong> Most Kelly users bet "Half Kelly" or "Quarter Kelly" to reduce variance while maintaining the system's benefits.</p>
+                <p><strong>Best For:</strong> Advanced bettors who can accurately estimate probabilities and handle volatility.</p>
+            </div>
+
+            <h2>Managing Losing Streaks</h2>
+
+            <p>Every bettor faces losing streaks. Your system must account for them.</p>
+
+            <h3>Expected Variance</h3>
+
+            <p>Even with a 55% win rate (very good), losing streaks happen:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Streak Length</th>
+                        <th>Probability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>3 losses</td><td>9.1%</td></tr>
+                    <tr><td>5 losses</td><td>1.8%</td></tr>
+                    <tr><td>7 losses</td><td>0.4%</td></tr>
+                    <tr><td>10 losses</td><td>0.03%</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Why Small Unit Sizes Matter</h3>
+
+            <div class="highlight-box">
+                <strong>With 5% units:</strong> 5 straight losses = 25% of bankroll gone<br>
+                <strong>With 2% units:</strong> 5 straight losses = 10% of bankroll gone<br>
+                <strong>With 1% units:</strong> 5 straight losses = 5% of bankroll gone
+            </div>
+
+            <p>The smaller your unit size, the more losing streaks you can survive.</p>
+
+            <h3>Rules for Losing Streaks</h3>
+
+            <ol>
+                <li><strong>Never increase bet size to recoup losses</strong> - This is called "chasing" and leads to disaster</li>
+                <li><strong>Stick to your system</strong> - The streak will end</li>
+                <li><strong>Consider reducing unit size</strong> - A smaller unit during a cold streak protects your bankroll</li>
+                <li><strong>Take a break if needed</strong> - Sometimes stepping away clears your head</li>
+                <li><strong>Review your process</strong> - Are you making sound decisions, or has something changed?</li>
+            </ol>
+
+            <h2>Bankroll Growth and Withdrawals</h2>
+
+            <h3>When to Increase Units</h3>
+
+            <p>Recalculate your unit size regularly:</p>
+
+            <p><strong>Conservative Approach:</strong> Recalculate monthly, only increase unit size, never decrease. Provides smooth growth.</p>
+
+            <p><strong>Dynamic Approach:</strong> Recalculate weekly, increase and decrease with bankroll changes. Maximizes compounding.</p>
+
+            <h3>Taking Profits - The 50/50 Rule</h3>
+
+            <p>When your bankroll doubles, withdraw 50% of the profits.</p>
+
+            <div class="highlight-box">
+                <strong>Example:</strong><br>
+                Starting bankroll: $1,000<br>
+                Bankroll after growth: $2,000<br>
+                Profit: $1,000<br>
+                Withdraw: $500 (50% of profit)<br>
+                New bankroll: $1,500
+            </div>
+
+            <p>This approach lets you enjoy success while maintaining a growing bankroll.</p>
+
+            <h2>Common Bankroll Mistakes</h2>
+
+            <div class="warning-box">
+                <strong>Mistake 1: Betting Too Large</strong><br>
+                Betting 10%+ of your bankroll per bet is a recipe for disaster. Even with an edge, variance will eventually wipe you out.<br>
+                <strong>Solution:</strong> Keep units at 1-3% maximum.
+            </div>
+
+            <div class="warning-box">
+                <strong>Mistake 2: Chasing Losses</strong><br>
+                After losing, the temptation to bet bigger to "get even" is powerful. This leads to even bigger losses.<br>
+                <strong>Solution:</strong> Stick to your unit size regardless of recent results.
+            </div>
+
+            <div class="warning-box">
+                <strong>Mistake 3: No Tracking</strong><br>
+                Without records, you can't evaluate your performance or identify leaks.<br>
+                <strong>Solution:</strong> Track every bet from day one.
+            </div>
+
+            <div class="warning-box">
+                <strong>Mistake 4: Using Scared Money</strong><br>
+                Betting with money you can't afford to lose leads to poor decisions driven by fear.<br>
+                <strong>Solution:</strong> Only bet with truly disposable income.
+            </div>
+
+            <h2>Sample Bankroll Management Plan</h2>
+
+            <div class="strategy-card">
+                <h4>Example Plan You Can Adapt</h4>
+                <p><strong>Starting Bankroll:</strong> $1,000</p>
+                <p><strong>Unit Size:</strong> 2% ($20)</p>
+                <p><strong>Betting Strategy:</strong> Flat betting with maximum 5 units per day</p>
+                <p><strong>Rules:</strong></p>
+                <ol>
+                    <li>Every bet is exactly 1 unit ($20)</li>
+                    <li>Maximum 5 bets per day</li>
+                    <li>Recalculate unit size every Monday</li>
+                    <li>If bankroll drops below $500, reduce to 1% units</li>
+                    <li>If bankroll doubles, withdraw 50% of profits</li>
+                    <li>Track all bets in spreadsheet</li>
+                    <li>Review results weekly</li>
+                    <li>Take 1-day break after losing 10+ units in a week</li>
+                </ol>
+            </div>
+
+            <h2>The Psychology of Bankroll Management</h2>
+
+            <h3>Accepting Variance</h3>
+            <p>You will have losing days, weeks, and even months despite making good bets. Accepting this intellectually is easy; accepting it emotionally is harder.</p>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> Focus on process over results. Did you make a sound betting decision? That's what matters, not whether it won.
+            </div>
+
+            <h3>The Long Game</h3>
+            <p>Sports betting is a marathon, not a sprint. A 2% edge over thousands of bets will make you money. Trying to get rich quick will make you poor quickly.</p>
+
+            <div class="key-takeaways">
+                <h3>Key Takeaways</h3>
+                <ol>
+                    <li><strong>Bankroll management is essential</strong> - You cannot be a successful bettor without it</li>
+                    <li><strong>Start conservative</strong> - 1-2% units protect against variance</li>
+                    <li><strong>Use a system</strong> - Flat betting is perfect for most bettors</li>
+                    <li><strong>Track everything</strong> - You can't improve what you don't measure</li>
+                    <li><strong>Stick to your rules</strong> - Discipline beats brilliance</li>
+                    <li><strong>Think long-term</strong> - Success is measured over thousands of bets</li>
+                    <li><strong>Adjust appropriately</strong> - Recalculate units as your bankroll changes</li>
+                    <li><strong>Accept variance</strong> - Losing streaks happen to everyone</li>
+                </ol>
+            </div>
+
+            <p>Proper bankroll management won't make you a winning bettor on its own, but without it, even the best handicapper will eventually go broke. Master this skill, and you'll be ahead of 90% of sports bettors.</p>
+
+            <div class="cta-box">
+                <h4>Ready to Start Betting Responsibly?</h4>
+                <p>Sign up at our recommended sportsbooks and put your bankroll management to work</p>
+                <a href="best-sportsbook-bonuses-2026.html" class="btn btn-primary">View Best Sportsbooks</a>
+            </div>
+
+            <div class="related-articles">
+                <h3>Continue Learning</h3>
+                <ul>
+                    <li><a href="sports-betting-beginners-guide.html">Sports Betting for Beginners</a></li>
+                    <li><a href="best-sportsbook-bonuses-2026.html">Best Sportsbook Bonuses 2026</a></li>
+                    <li><a href="best-betting-apps.html">Best Sports Betting Apps</a></li>
+                    <li><a href="draftkings-vs-fanduel.html">DraftKings vs FanDuel</a></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-container">
+            <div class="disclaimer">
+                <h4>Gambling Disclaimer</h4>
+                <p>Gambling involves risk. Only wager what you can afford to lose. If you or someone you know has a gambling problem, call <strong>1-800-GAMBLER</strong> (National Council on Problem Gambling). You must be 21+ years of age and physically present in a state where online sports betting is legal to place wagers. Void where prohibited. This site contains affiliate links. Please gamble responsibly.</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Sharp Betting Guide. All rights reserved. | <a href="index.html">Home</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

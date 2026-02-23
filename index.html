@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert sports betting guides, sportsbook reviews, and strategies. Find the best bonuses, compare betting apps, and learn winning strategies.">
+    <meta name="keywords" content="sports betting, sportsbook bonuses, betting apps, DraftKings, FanDuel, betting guide, bankroll management">
+    <meta name="author" content="Sharp Betting Guide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sharp Betting Guide - Expert Sports Betting Resources">
+    <meta property="og:description" content="Expert sports betting guides, sportsbook reviews, and winning strategies. Your trusted source for legal sports betting information.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharpbettingguide.com">
+    <title>Sharp Betting Guide - Expert Sports Betting Resources & Reviews</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #1c2128;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-green: #2ea043;
+            --accent-gold: #d4a72c;
+            --accent-green-hover: #3fb950;
+            --border-color: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent-green);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-green-hover);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-green-hover);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+        }
+
+        /* Featured Articles */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-green);
+        }
+
+        .card-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--accent-gold);
+            color: var(--bg-primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .card-content h3 a {
+            color: var(--text-primary);
+        }
+
+        .card-content h3 a:hover {
+            color: var(--accent-gold);
+        }
+
+        .card-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .read-more {
+            color: var(--accent-green);
+            font-weight: 500;
+        }
+
+        /* Sportsbook CTA */
+        .sportsbook-cta {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .sportsbook-cta h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sportsbook-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .sportsbook-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .sportsbook-item {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            transition: border-color 0.2s ease;
+        }
+
+        .sportsbook-item:hover {
+            border-color: var(--accent-green);
+        }
+
+        .sportsbook-item .name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .sportsbook-item .bonus {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+        }
+
+        /* Article List */
+        .article-list {
+            margin-top: 2rem;
+        }
+
+        .article-list-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-list-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            min-width: 3rem;
+        }
+
+        .article-list-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-list-content h3 a {
+            color: var(--text-primary);
+        }
+
+        .article-list-content h3 a:hover {
+            color: var(--accent-gold);
+        }
+
+        .article-list-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Trust Signals */
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        .trust-item .label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+        }
+
+        .disclaimer {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .disclaimer h4 {
+            color: var(--accent-gold);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--bg-secondary);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-list-item {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .article-number {
+                font-size: 1.5rem;
+            }
+
+            .trust-signals {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Sharp<span>Betting</span>Guide</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="best-sportsbook-bonuses-2026.html">Bonuses</a></li>
+                    <li><a href="best-betting-apps.html">Betting Apps</a></li>
+                    <li><a href="sports-betting-beginners-guide.html">Beginners Guide</a></li>
+                    <li><a href="draftkings-vs-fanduel.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Smart Betting Starts With <span>Better Information</span></h1>
+        <p>Expert guides, honest reviews, and proven strategies to help you make smarter betting decisions.</p>
+        <div class="cta-buttons">
+            <a href="best-sportsbook-bonuses-2026.html" class="btn btn-primary">Best Bonuses 2026</a>
+            <a href="sports-betting-beginners-guide.html" class="btn btn-secondary">Beginner's Guide</a>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-title">Featured Guides</h2>
+
+        <div class="featured-grid">
+            <article class="article-card">
+                <div class="card-content">
+                    <span class="card-badge">Top Pick</span>
+                    <h3><a href="best-sportsbook-bonuses-2026.html">Best Sportsbook Bonuses 2026: Top Sign-Up Offers Compared</a></h3>
+                    <p>We've analyzed dozens of legal US sportsbooks to bring you the most valuable welcome offers available right now. Find the best bonus for your betting style.</p>
+                    <div class="card-meta">
+                        <span>Updated February 2026</span>
+                        <a href="best-sportsbook-bonuses-2026.html" class="read-more">Read Guide</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-content">
+                    <span class="card-badge">Comparison</span>
+                    <h3><a href="draftkings-vs-fanduel.html">DraftKings vs FanDuel: Complete 2026 Comparison Guide</a></h3>
+                    <p>DraftKings and FanDuel dominate the market. We spent hundreds of hours testing both to help you decide which platform is better for your needs.</p>
+                    <div class="card-meta">
+                        <span>Updated February 2026</span>
+                        <a href="draftkings-vs-fanduel.html" class="read-more">Read Guide</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-content">
+                    <span class="card-badge">Essential</span>
+                    <h3><a href="sports-betting-beginners-guide.html">Sports Betting for Beginners: The Complete 2026 Guide</a></h3>
+                    <p>New to sports betting? This comprehensive guide covers everything you need to know before placing your first bet, from odds to strategies.</p>
+                    <div class="card-meta">
+                        <span>Updated February 2026</span>
+                        <a href="sports-betting-beginners-guide.html" class="read-more">Read Guide</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="sportsbook-cta">
+            <h2>Ready to Start Betting?</h2>
+            <p>Claim exclusive welcome bonuses from the top-rated legal sportsbooks</p>
+            <div class="sportsbook-logos">
+                <a href="#" class="sportsbook-item">
+                    <div class="name">DraftKings</div>
+                    <div class="bonus">Bet $5, Get $200</div>
+                </a>
+                <a href="#" class="sportsbook-item">
+                    <div class="name">FanDuel</div>
+                    <div class="bonus">$1,000 No Sweat Bet</div>
+                </a>
+                <a href="#" class="sportsbook-item">
+                    <div class="name">BetMGM</div>
+                    <div class="bonus">Up to $1,500 Bonus</div>
+                </a>
+                <a href="#" class="sportsbook-item">
+                    <div class="name">Caesars</div>
+                    <div class="bonus">$1,000 First Bet</div>
+                </a>
+            </div>
+            <a href="best-sportsbook-bonuses-2026.html" class="btn btn-primary">Compare All Bonuses</a>
+        </div>
+
+        <h2 class="section-title">More Guides</h2>
+
+        <div class="article-list">
+            <div class="article-list-item">
+                <span class="article-number">01</span>
+                <div class="article-list-content">
+                    <h3><a href="best-betting-apps.html">Best Sports Betting Apps 2026: Top Mobile Sportsbooks Ranked</a></h3>
+                    <p>We've tested every major betting app extensively to bring you this definitive ranking. Find the fastest, most reliable apps for mobile betting.</p>
+                </div>
+            </div>
+            <div class="article-list-item">
+                <span class="article-number">02</span>
+                <div class="article-list-content">
+                    <h3><a href="bankroll-management-guide.html">Bankroll Management for Sports Betting: The Complete Guide</a></h3>
+                    <p>Learn how to manage your betting money like a professional. Protect your bankroll and maximize long-term growth with proven strategies.</p>
+                </div>
+            </div>
+            <div class="article-list-item">
+                <span class="article-number">03</span>
+                <div class="article-list-content">
+                    <h3><a href="draftkings-vs-fanduel.html">DraftKings vs FanDuel: Which Sportsbook Is Better?</a></h3>
+                    <p>A head-to-head comparison of odds, apps, promotions, and features to help you choose the right platform.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust-signals">
+            <div class="trust-item">
+                <div class="number">30+</div>
+                <div class="label">Legal States</div>
+            </div>
+            <div class="trust-item">
+                <div class="number">100%</div>
+                <div class="label">Licensed Books</div>
+            </div>
+            <div class="trust-item">
+                <div class="number">2026</div>
+                <div class="label">Updated Content</div>
+            </div>
+            <div class="trust-item">
+                <div class="number">21+</div>
+                <div class="label">Age Requirement</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="sports-betting-beginners-guide.html">Beginners Guide</a></li>
+                        <li><a href="bankroll-management-guide.html">Bankroll Management</a></li>
+                        <li><a href="best-sportsbook-bonuses-2026.html">Sportsbook Bonuses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Reviews</h4>
+                    <ul>
+                        <li><a href="draftkings-vs-fanduel.html">DraftKings vs FanDuel</a></li>
+                        <li><a href="best-betting-apps.html">Best Betting Apps</a></li>
+                        <li><a href="best-sportsbook-bonuses-2026.html">Best Bonuses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sportsbooks</h4>
+                    <ul>
+                        <li><a href="#">DraftKings</a></li>
+                        <li><a href="#">FanDuel</a></li>
+                        <li><a href="#">BetMGM</a></li>
+                        <li><a href="#">Caesars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.ncpgambling.org" target="_blank" rel="noopener">NCPG</a></li>
+                        <li><a href="https://www.gamblersanonymous.org" target="_blank" rel="noopener">Gamblers Anonymous</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <h4>Gambling Disclaimer</h4>
+                <p>Gambling involves risk. Only wager what you can afford to lose. If you or someone you know has a gambling problem, call <strong>1-800-GAMBLER</strong> (National Council on Problem Gambling). You must be 21+ years of age and physically present in a state where online sports betting is legal to place wagers. Void where prohibited. This site contains affiliate links. We may receive compensation when you sign up through our links at no additional cost to you. All sportsbooks featured are legally licensed and regulated in their operating jurisdictions. Please gamble responsibly.</p>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Sharp Betting Guide. All rights reserved. | For entertainment purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
