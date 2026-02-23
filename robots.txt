@@ -1,0 +1,8 @@
+# robots.txt for Affiliate Site
+# https://jcmac29.github.io/affiliate-site/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jcmac29.github.io/affiliate-site/sitemap.xml
