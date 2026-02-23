@@ -39,4 +39,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- New High-Value Articles -->
+  <url>
+    <loc>https://jcmac29.github.io/affiliate-site/best-sports-betting-apps-comparison-2026.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jcmac29.github.io/affiliate-site/ai-sports-betting-guide.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jcmac29.github.io/affiliate-site/sports-betting-bankroll-strategy.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
